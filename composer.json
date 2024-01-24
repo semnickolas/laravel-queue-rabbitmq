@@ -1,11 +1,15 @@
 {
-  "name": "vladimir-yuldashev/laravel-queue-rabbitmq",
+  "name": "semnickolas/laravel-queue-rabbitmq",
   "description": "RabbitMQ driver for Laravel Queue",
   "license": "MIT",
   "authors": [
     {
       "name": "Vladimir Yuldashev",
       "email": "misterio92@gmail.com"
+    },
+    {
+      "name": "Mykola Semenda",
+      "email": "semnickolas@gmail.com"
     }
   ],
   "require": {
@@ -13,7 +17,7 @@
     "illuminate/database": "5.4.*",
     "illuminate/support": "5.4.*",
     "illuminate/queue": "5.4.*",
-    "php-amqplib/php-amqplib": "2.6.*"
+    "php-amqplib/php-amqplib": "3.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.5",
@@ -21,7 +25,7 @@
   },
   "autoload": {
     "psr-0": {
-      "VladimirYuldashev\\LaravelQueueRabbitMQ": "src/"
+      "LaravelRabbit\\": "src/LaravelRabbit/"
     }
   },
   "minimum-stability": "dev",

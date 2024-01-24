@@ -1,9 +1,9 @@
 <?php
 
+use LaravelRabbit\Queue\Connectors\RabbitMQConnector;
+use LaravelRabbit\Queue\RabbitMQQueue;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PHPUnit\Framework\TestCase;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
 
 class RabbitMQConnectorTest extends TestCase
 {

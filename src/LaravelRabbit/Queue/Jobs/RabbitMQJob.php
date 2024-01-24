@@ -1,6 +1,6 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs;
+namespace LaravelRabbit\Queue\Jobs;
 
 use Exception;
 use Illuminate\Container\Container;
@@ -9,9 +9,10 @@ use Illuminate\Database\DetectsDeadlocks;
 use Illuminate\Queue\Jobs\Job;
 use Illuminate\Queue\Jobs\JobName;
 use Illuminate\Support\Str;
+use LaravelRabbit\Queue\RabbitMQQueue;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use function VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\with;
 
 class RabbitMQJob extends Job implements JobContract
 {
@@ -31,7 +32,7 @@ class RabbitMQJob extends Job implements JobContract
      * Creates a new instance of RabbitMQJob.
      *
      * @param \Illuminate\Container\Container                             $container
-     * @param \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $connection
+     * @param \LaravelRabbit\Queue\RabbitMQQueue $connection
      * @param \PhpAmqpLib\Channel\AMQPChannel                             $channel
      * @param string                                                      $queue
      * @param \PhpAmqpLib\Message\AMQPMessage                             $message
